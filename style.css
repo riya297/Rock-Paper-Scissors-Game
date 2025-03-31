@@ -1,0 +1,233 @@
+/* General Reset */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(221, 194, 221);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(75, 44, 75); /* Deep Purple */
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(75, 44, 75);
+    color: white;
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    border: rgb(199, 169, 199) solid;
+    background-color: rgb(75, 44, 75);
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#dark-mode-toggle:hover {
+    background-color: rgb(68, 45, 68);
+    transform: scale(1.1);
+}
+
+/* Choices */
+.choices {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.choice {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    background-color: rgb(75, 44, 75);
+}
+
+.choice img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#user-score, #comp-score {
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+    color: black;
+}
+
+#user, #computer {
+    margin-top: 0.6rem;
+}
+
+/* Message Box */
+.msg-container {
+    margin-top: 3.5rem;
+}
+
+#msg {
+    background-color: rgb(75, 44, 75);
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Restart Button */
+.restart-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#restart-btn {
+    color: rgb(75, 44, 75);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: rgb(75, 44, 75) solid;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#restart-btn:hover {
+    color: rgb(228, 12, 12);
+    font-size: 1.3rem;
+    background-color: rgb(221, 194, 221);
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode h1 {
+    background-color: rgb(75, 44, 75);
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: rgb(75, 44, 75);
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    background-color: rgb(136, 94, 136);
+}
+
+.dark-mode .choice {
+    background-color: rgb(75, 44, 75);
+}
+
+.dark-mode .choice:hover {
+    background-color: rgb(136, 94, 136);
+}
+
+.dark-mode #msg {
+    background-color: #e8e8e8;
+    color: #e8e8e8;
+}
+
+.dark-mode #restart-btn {
+    background-color: black;
+    color: #e8e8e8;
+}
+
+.dark-mode #restart-btn:hover {
+    background-color: rgb(221, 194, 221);
+    color: rgb(228, 12, 12);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    #dark-mode-toggle {
+        font-size: 1.2rem;
+        padding: 4px;
+        top: 17px;
+        right: 10px;
+    }
+    .choices {
+        gap: 1.5rem;
+    }
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+    .score-board {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    #dark-mode-toggle {
+        top: 15px;
+        right: 10px;
+        font-size: 1rem;
+        padding: 4px;
+    }
+}
